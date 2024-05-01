@@ -1,0 +1,56 @@
+.slide{
+    color: rgb(44, 44, 229);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+.slide1{
+    background-image: url('../../../assets/banner/1.jpg');
+}
+.slide2{
+    background-image: url('../../../assets/banner/2.jpg');
+}
+.slide3{
+    background-image: url('../../../assets/banner/3.jpg');
+}
+.slide4{
+    background-image: url('../../../assets/banner/4.jpg');
+}
+.slide5{
+    background-image: url('../../../assets/banner/5.jpg');
+}
+.slide6{
+    background-image: url('../../assets/slide-6.jpg');
+}
+.slide6{
+    background-image: url('../../../assets/banner/6.jpg');
+}
+#app {
+  height: 100%;
+}
+
+.swiper {
+  width: 100%;
+ 
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .swiper-slide img {
+  display: block; 
+} */
