@@ -1,21 +1,37 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import { FaRegBell, FaSearch } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 
 const Navbar = () => {
+    const { user, logout } = useContext(AuthContext);
+
+    const handleLogout = () => {
+        logout()
+            .then(() => { })
+            .catch(error => console.log(error))
+    }
+
     const Links =
         <>
             <li><NavLink to={'/'}>Home</NavLink></li>
             <li><NavLink to={'/about'}>About</NavLink></li>
-            <li><NavLink to={'/services'}>Services</NavLink></li>
-            <li><NavLink to={'/blog'}>Blog</NavLink></li>
-            <li><NavLink to={'/contact'}>Contact</NavLink></li>
+            {
+                user?.email ? <>
+                    <li><Link to={'/booking'}>My Booking</Link></li>
+                    <li> <button onClick={handleLogout}>LogOut</button></li>
+                </> : <li><NavLink to={'/login'}>Login</NavLink></li>
+
+            }
+
+
 
         </>
     return (
-        <div className="navbar  bg-base-100 h-28 mb-4">
+        <div className="navbar  bg-base-100 h-28 mb-4 ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
