@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import login from '../../assets/login/login.svg'
 
 const Login = () => {
@@ -38,9 +39,7 @@ const Login = () => {
                             <button className="btn btn-primary">Login</button>
                         </div>
                     </form>
-                    <div>
-                        <p className='text-center pt-4 border-b-orange-500 border-b-2' >Another Way to Login</p>
-                    </div>
+                    <p className='text-center py-3'>If you are new in Car Garage Please<Link className=' text-blue-600 font-bold underline' to={'/signup'}>Sign Up</Link></p>
                 </div>
             </div>
         </div>
